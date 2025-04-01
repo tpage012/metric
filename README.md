@@ -24,6 +24,12 @@ Le site a été construit entièrement en HTML/CSS, sans base de données, afin 
 - Un menu latéral avec un index dynamique des auteurs
 - Des fichiers `.html` autonomes, chacun dédié à un poète spécifique
 
+[principal](./Screenshot1.png)
+La page d'accueil. La liste des auteurs est dans le menu latéral.
+
+[principal](./Screenshot2.png)
+Une fiche d'auteur, avec section déroulante pour accéder à la bibliographie, aux oeuvres et aux remarques d'ordre métrique.
+
 ---
 
 Pour toute remarque ou correction, n’hésitez pas à me contacter via tim.page@etu.u-bordeaux-montaigne.fr.
