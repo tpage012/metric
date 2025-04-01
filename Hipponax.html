@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hipponax</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Hipponax</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Hipponax est un poète iambique grec actif au VIe siècle av. J.-C., originaire d’Éphèse ou de Clazomènes. Il est célèbre pour son style acerbe, satirique et souvent grossier. Il a introduit et popularisé le mètre scatologique dit 'choliambique' ou 'vers boiteux', qu’il utilise pour railler ses ennemis et pour peindre des scènes du quotidien avec une crudité volontaire. Il est l’un des premiers à incarner une voix poétique marginale et contestataire dans la tradition grecque."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Fragments iambiques*\n  - Mètre : choliambique (trimètre iambique avec clausule boiteuse)\n  - Édition critique : West, *Iambi et Elegi Graeci*\n  - Source : citations par Athénée, Suidas, et papyri\n\n- *Invectives et scènes de la vie urbaine*\n  - Thèmes : pauvreté, satire sociale, sexualité\n  - Ton : burlesque, violent, provocateur"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Le vers choliambique de Hipponax repose sur une structure iambique classique, altérée par une clausule finale boiteuse qui brise la cadence attendue. Cette déformation rythmique contribue à l'effet comique et agressif. Il manipule également l’intonation et la diction pour accentuer la moquerie et l’ironie de ses textes."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- West, M. L., *Iambi et Elegi Graeci*\n- Gerber, D. E., *Greek Iambic Poetry*\n- Rosen, R. M., *Hipponax and the Invention of the Comic Genre*\n- Bowie, E. L., 'Early Greek Iambic Poetry'\n- Degani, E., *Ipponatte: Testimonianze e Frammenti*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

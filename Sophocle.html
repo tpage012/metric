@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sophocle</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Sophocle</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Sophocle est un dramaturge grec du Ve siècle av. J.-C., né vers 496 à Colone, près d'Athènes. Il est l’auteur de plus de 120 pièces, dont sept tragédies complètes nous sont parvenues, notamment *Œdipe roi*, *Antigone*, et *Électre*. Contemporain d’Eschyle et d’Euripide, il a introduit plusieurs innovations dans la dramaturgie grecque, comme l’ajout du troisième acteur. Son théâtre explore la condition humaine, les dilemmes moraux et la fatalité tragique avec une structure formelle rigoureuse et une langue noble."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Œdipe roi, Antigone, Électre, Ajax, Philoctète, Trachiniennes, Œdipe à Colone*\n  - Mètre : trimètre iambique, anapestes, chants lyriques\n  - Édition critique : Lloyd-Jones & Wilson (OCT)\n\n- *Fragments tragiques*\n  - Source : papyri, citations antiques\n  - Thèmes : piété, responsabilité, destin, clairvoyance"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="La métrique de Sophocle témoigne d’un équilibre remarquable entre rigueur formelle et expressivité dramatique. Le trimètre iambique est utilisé avec une grande variété rythmique. Les chœurs, très développés, montrent une richesse métrique fondée sur des structures doriennes, souvent complexes et symétriques. Il maîtrise aussi les transitions et contrastes métriques pour souligner les moments clés de l’action."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Lloyd-Jones, H. & Wilson, N. G., *Sophoclis Fabulae* (OCT)\n- Knox, B. M. W., *The Heroic Temper*\n- Winnington-Ingram, R. P., *Sophocles: An Interpretation*\n- Lesky, A., *Histoire de la littérature grecque*\n- Segal, C., *Tragedy and Civilization: An Interpretation of Sophocles*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

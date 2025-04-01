@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mimnerme</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Mimnerme</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Mimnerme est un poète élégiaque grec du VIIe siècle av. J.-C., originaire de Colophon ou de Smyrne. Il est l’un des premiers représentants de l’élégie amoureuse et personnelle dans la poésie grecque. Ses vers expriment la brièveté de la vie, la beauté de la jeunesse, et la douleur du vieillissement. Il est réputé pour avoir chanté son amour pour Nanno, une joueuse de flûte. Son style mêle mélancolie et sensualité dans un langage direct et émouvant."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Fragments élégiaques*\n  - Mètre : distique élégiaque\n  - Édition critique : West, *Iambi et Elegi Graeci*\n  - Source : citations par Stobée, papyri\n\n- *Poèmes à Nanno*\n  - Thèmes : amour, jeunesse, mort\n  - Style : intime, plaintif, lyrique"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Le distique élégiaque de Mimnerme est d’une grande fluidité, avec une utilisation équilibrée de l’hexamètre et du pentamètre. Il privilégie les clausules douces, les effets de sonorité et les répétitions pour souligner la nostalgie de ses thèmes. Le rythme épouse souvent l’émotion du discours, créant une harmonie poétique touchante."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- West, M. L., *Iambi et Elegi Graeci*\n- Gerber, D. E., *Greek Elegiac Poetry*\n- Pratt, L. H., *Lying and Poetry from Homer to Pindar*\n- Bowie, E. L., 'Early Greek Elegy, Symposium and Public Festival'\n- Aloni, A., *L’epos elegiaco*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

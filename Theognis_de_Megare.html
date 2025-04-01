@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Théognis de Mégare</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Théognis de Mégare</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Théognis de Mégare est un poète élégiaque grec du VIe siècle av. J.-C., connu pour avoir composé un recueil de maximes morales, politiques et sociales, adressées à un jeune homme nommé Cyrnos. Son œuvre reflète les préoccupations de l’aristocratie face aux bouleversements politiques et sociaux. Il est souvent considéré comme un représentant de l’éthique aristocratique grecque. Le corpus qui lui est attribué, conservé dans l’Anthologie palatine, pourrait contenir des interpolations postérieures."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Élégies à Cyrnos*\n  - Mètre : distique élégiaque\n  - Édition critique : West, *Iambi et Elegi Graeci*\n  - Thèmes : éducation morale, politique, amitié, richesse, noblesse\n\n- *Fragments éthico-politiques*\n  - Source : tradition manuscrite byzantine\n  - Style : aphoristique, gnomique, direct"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="La versification de Théognis est dominée par le distique élégiaque, utilisé comme véhicule de pensée morale et politique. Son rythme est simple mais efficace, souvent ponctué de clausules fortes ou d’allitérations. Il privilégie l’énoncé direct, renforçant le caractère sentencieux de ses propos. Les répétitions et parallélismes renforcent la dimension didactique de son œuvre."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- West, M. L., *Iambi et Elegi Graeci*\n- Gerber, D. E., *Greek Elegiac Poetry*\n- Ford, A., *The Origins of Criticism: Literary Culture and Poetic Theory in Classical Greece*\n- Griffith, M., *Poet and Citizen in Theognis*\n- Bowie, E. L., 'Theognidea and Megarian Society'"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

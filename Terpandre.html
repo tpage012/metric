@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terpandre</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Terpandre</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Terpandre est un poète et musicien grec du VIIe siècle av. J.-C., originaire de l’île de Lesbos. Il est considéré comme le fondateur de la poésie lyrique monodique et l’un des premiers à avoir codifié l’usage musical dans les concours spartiates. Il aurait introduit la cithare à sept cordes et fixé les formes des noms harmoniques. Il fut vénéré à Sparte comme un maître de la musique et du chant, préfigurant l’école dorienne de poésie musicale."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Fragments lyriques*\n  - Mètre : hexamètre, vers lyriques\n  - Édition critique : Campbell (Greek Lyric I)\n  - Source : citations par Plutarque, Athénée, scholies\n\n- *Chants spartiates*\n  - Usage : cérémonies et concours\n  - Style : simple, solennel, structuré"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="La poésie de Terpandre utilise des mètres simples et solennels adaptés à la récitation monodique. Il aurait contribué à la transition entre l’épopée et la poésie lyrique par un usage métrique codifié. Son style est direct et modulé selon les exigences musicales, soulignant l’importance de l’harmonie entre parole et mélodie."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Campbell, D. A., *Greek Lyric I*\n- Barker, A., *Greek Musical Writings*\n- West, M. L., *Ancient Greek Music*\n- Gentili, B. & Perusino, F., *Poetry and Performance in Ancient Greece*\n- Hordern, J., 'Music and Aesthetics in Terpander'"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

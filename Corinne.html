@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corinne</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Corinne</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Corinne est une poétesse grecque ancienne, probablement originaire de Tanagra en Béotie, et active aux alentours du VIe ou du Ve siècle av. J.-C. La tradition rapporte qu'elle aurait été contemporaine et même rivale de Pindare, qu'elle aurait battu plusieurs fois dans des concours poétiques. Sa poésie, écrite en dialecte béotien, mettait en valeur des thèmes régionaux et mythologiques, souvent centrés sur des figures féminines. Peu de fragments nous sont parvenus, mais ils témoignent d’un style clair, narratif et élégant."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Fragments mythologiques*\n  - Mètre : lyrique narratif\n  - Édition critique : Campbell (Greek Lyric IV)\n  - Source : citations de Pausanias, Plutarque et d'autres auteurs\n\n- *Poèmes dédiés aux figures féminines*\n  - Thèmes : héroïnes béotiennes, récits locaux\n  - Style : narration épique adaptée au chant lyrique"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Corinne semble avoir utilisé des mètres lyriques simples adaptés à la narration mythologique. L'accent est mis sur la clarté du récit plutôt que sur l’innovation métrique. Les fragments conservés ne permettent pas de reconstruction complète, mais les témoignages anciens soulignent son habileté à allier diction poétique et tradition régionale."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Campbell, D. A., *Greek Lyric IV*\n- Lefkowitz, M. R., *Women in Greek Myth*\n- West, M. L., *Greek Lyric Poetry*\n- Snyder, J. M., *The Woman and the Lyre*\n- Plant, I. M., *Women Writers of Ancient Greece and Rome*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

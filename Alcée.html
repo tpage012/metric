@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alcée</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Alcée</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Alcée de Mytilène, né vers 620 av. J.-C., est un poète lyrique grec originaire de l'île de Lesbos. Contemporain de Sappho, il est connu pour sa poésie politique et sympotique. Issu d'une famille aristocratique, il participa activement aux luttes politiques de son temps, notamment contre les tyrans de Mytilène. Sa poésie, composée en dialecte éolien, reflète des préoccupations personnelles, politiques et militaires, souvent dans un cadre convivial ou festif."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Fragments sympotiques*\n  - Mètre : principalement des strophes sapphiques et alcaïques\n  - Édition critique : Lobel-Page\n  - Manuscrits : Papyrus d'Oxyrhynque\n\n- *Poèmes politiques*\n  - Mètre : divers mètres lyriques\n  - Références : fr. 70, 129, 332 LP"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Alcée fait un usage typique du mètre alcaïque, caractérisé par sa structure régulière mais souple. Son vers montre une alternance entre tonicité et atonie typique de l'éolien, avec un traitement fréquent des particules enclitiques et des pronoms faibles, souvent intégrés dans le schéma métrique de façon fluide."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Lobel, E. & Page, D. L., *Poetarum Lesbiorum Fragmenta*\n- Voigt, E.-M., *Sappho et Alcaeus*\n- Burnett, A., *Three Archaic Poets*\n- Campbell, D. A., *Greek Lyric, Volume I: Sappho and Alcaeus* (Loeb Classical Library)"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

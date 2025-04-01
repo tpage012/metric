@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Poésie grecque</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .w3-bar-block .w3-bar-item {padding:20px}
+    #searchInput {
+      padding:8px;
+      border:1px solid #ccc;
+      float: right;
+      margin-top: 12px;
+      width: 300px;
+    }
+    .w3-header-bar {
+      padding: 16px;
+      background: #e5e5e5;
+      overflow: hidden;
+    }
+    .w3-subtitle {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+    }
+    .w3-main {
+      background-color: #c0c0c0;
+    }
+    .centered-image {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 25%;
+      height: auto;
+      border: 2px solid #888;
+      border-radius: 4px;
+    }
+    .summary-paragraph {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      text-align: center;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: relative;
+      background-color: #f9f9f9;
+      padding-left: 10px;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      padding: 5px 10px;
+      display: block;
+      text-decoration: none;
+      color: #000;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <h3 class="w3-wide"><b>Index</b></h3>
+    <div class="w3-subtitle">Catalogue des auteurs et métrique</div>
+  </div>
+  <div class="w3-padding-64 w3-large">
+    <a href="#home" class="w3-bar-item w3-button">Accueil</a>
+    <div class="dropdown">
+      <a class="w3-bar-item w3-button">Auteurs ▸</a>
+      <div class="dropdown-content">
+        <a href="Alcée.html">Alcée</a>
+        <a href="Alcman.html">Alcman</a>
+        <a href="Anacreon.html">Anacréon</a>
+        <a href="Archiloque.html">Archiloque</a>
+        <a href="Bacchylide.html">Bacchylide</a>
+        <a href="Corinne.html">Corinne</a>
+        <a href="Critias.html">Critias</a>
+        <a href="Eschyle.html">Eschyle</a>
+        <a href="Euripide.html">Euripide</a>
+        <a href="Hipponax.html">Hipponax</a>
+        <a href="Ibycos.html">Ibycos</a>
+        <a href="Mimnerme.html">Mimnerme</a>
+        <a href="Phrynichos.html">Phrynichos</a>
+        <a href="Pindare.html">Pindare</a>
+        <a href="Sappho.html">Sappho</a>
+        <a href="Simonide_de_Ceos.html">Simonide de Céos</a>
+        <a href="Solon.html">Solon</a>
+        <a href="Sophocle.html">Sophocle</a>
+        <a href="Stesichore.html">Stésichore</a>
+        <a href="Terpandre.html">Terpandre</a>
+        <a href="Theognis_de_Megare.html">Théognis de Mégare</a>
+        <a href="Timocreon_de_Rhodes.html">Timocréon de Rhodes</a>
+        <a href="Tyrtee.html">Tyrtée</a>
+      </div>
+    </div>
+    <a href="#prosodie" class="w3-bar-item w3-button">Prosodie</a>
+    <a href="#bibliographie" class="w3-bar-item w3-button">Bibliographie</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main" style="margin-left:250px">
+  <div class="w3-header-bar">
+    <input type="text" id="searchInput" placeholder="Recherche..." onkeyup="searchContent()">
+  </div>
+
+  <div class="w3-container w3-padding-32" id="home">
+    <h1>Bienvenue</h1>
+    <img src="home.png" alt="accueil" class="centered-image">
+    <p class="summary-paragraph">
+      Ce site est développé dans le cadre d'un cours pour accompagner mon mémoire de recherche sur les formes métriques en poésie grecque. Il a pour fonction de maintenir à jour ma bibliographie, cataloguer les auteurs et les œuvres, ainsi que chaque édition critique utilisée. Je propose également un relevé des manuscrits disponibles pour chaque poème et un index métrique.
+    </p>
+  </div>
+
+<script>
+function renderMarkdown() {
+  document.querySelectorAll('.markdown').forEach(el => {
+    const md = el.getAttribute('data-md');
+    el.innerHTML = marked.parse(md);
+  });
+}
+renderMarkdown();
+
+function searchContent() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  document.querySelectorAll('.w3-container').forEach(section => {
+    if (section.textContent.toLowerCase().includes(input)) {
+      section.style.display = '';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

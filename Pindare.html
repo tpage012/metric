@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pindare</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Pindare</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Pindare est un poète lyrique grec du Ve siècle av. J.-C., né à Cynoscéphales près de Thèbes vers 518. Il est célèbre pour ses odes triomphales, ou épinicies, composées pour célébrer les vainqueurs des jeux panhelléniques (Olympiques, Pythiques, Néméens, Isthmiques). Sa poésie combine érudition mythologique, langage élevé et structure complexe. Il jouissait d’une renommée considérable de son vivant et après. Ses odes ont été largement transmises par la tradition manuscrite."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Odes olympiques, pythiques, néméennes, isthmiques*\n  - Mètre : strophe-antistrophe-épisode\n  - Édition critique : Snell-Maehler\n  - Manuscrit : tradition médiévale\n\n- *Fragments lyriques divers*\n  - Thèmes : mythe, éthique aristocratique, religion\n  - Langue : dorien littéraire enrichi de formes éoliennes"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="La prosodie pindarique repose sur des schémas métriques complexes et savamment équilibrés, souvent organisés en triades (strophe, antistrophe, épode). Il utilise des mètres choraux dérivés de traditions doriennes, avec une grande maîtrise des variations rythmiques, de la responsion et de la symétrie métrique. La structure poétique renforce l’effet solennel et rituel de la performance."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Snell, B. & Maehler, H., *Pindari Carmina cum Fragmentis*\n- Race, W. H., *Pindar: Olympian Odes, Pythian Odes*\n- Bundy, E. L., *Studia Pindarica*\n- Lefkowitz, M. R., *First-Person Fictions*\n- Carey, C., *Aegean Festival Chronology and Pindaric Composition*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

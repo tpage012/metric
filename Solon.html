@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solon</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Solon</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Solon, né à Athènes vers 640 av. J.-C., est l’un des Sept Sages de la Grèce antique. Homme politique, législateur, et poète, il est célèbre pour ses réformes sociales et économiques qui ont jeté les bases de la démocratie athénienne. Parallèlement à son activité politique, Solon composa des poèmes en vers élégiaques qui exposaient ses idées morales, civiques et philosophiques. Son œuvre poétique constitue un témoignage unique sur la pensée et les tensions de son époque."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Fragments élégiaques*\n  - Mètre : distique élégiaque\n  - Édition critique : West, *Iambi et Elegi Graeci*\n  - Thèmes : justice (dikê), modération, richesse, loi\n\n- *Poèmes politiques*\n  - Public : citoyens athéniens\n  - Style : exhortatif, dense, gnomique"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Le distique élégiaque utilisé par Solon est marqué par une grande sobriété formelle. La rythmique est au service du propos moral et civique. Il exploite les répétitions, les clausules fortes et les contrastes métriques pour souligner ses arguments. Son style est clair, ferme, souvent solennel."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- West, M. L., *Iambi et Elegi Graeci*\n- Rhodes, P. J., *Solon and the Greek Tradition*\n- Linforth, I. M., *Solon the Athenian*\n- Hude, C., *Solonis Fragmenta*\n- Irwin, E., *Solon and Early Greek Poetry: The Politics of Exhortation*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

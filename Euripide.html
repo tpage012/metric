@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euripide</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Euripide</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Euripide est un dramaturge grec du Ve siècle av. J.-C., né vers 480 à Salamine et mort vers 406 en Macédoine. Il est le plus jeune des trois grands tragiques athéniens, après Eschyle et Sophocle. Son théâtre est marqué par une approche psychologique des personnages, un réalisme parfois provocateur, et une remise en question des mythes traditionnels. Il aurait écrit environ 90 pièces, dont dix-neuf nous sont parvenues intégralement. Sa postérité a influencé le théâtre antique, hellénistique et même moderne."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Médée, Hippolyte, Les Bacchantes, Les Troyennes*\n  - Mètre : trimètre iambique, chants lyriques\n  - Édition critique : Diggle, *Oxford Classical Texts*\n\n- *Hélène, Ion, Iphigénie en Tauride*\n  - Thèmes : identité, illusion, justice divine\n  - Source : tradition manuscrite médiévale"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Euripide exploite les possibilités expressives du trimètre iambique avec finesse, en accentuant les variations rythmiques pour souligner les émotions des personnages. Ses chœurs utilisent des mètres complexes, souvent innovants, parfois inspirés de la poésie lyrique antérieure. Il joue avec les clausules, les responsions et les ruptures pour intensifier les tensions dramatiques."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Diggle, J., *Euripides: Fabulae* (OCT)\n- Knox, B. M. W., *Euripides: The Poet as Rebel*\n- Michelini, A. N., *Euripides and the Tragic Tradition*\n- Lefkowitz, M. R., *The Lives of the Greek Poets*\n- Lloyd, M., *The Agon in Euripides*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

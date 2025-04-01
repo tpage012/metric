@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alcman</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Alcman</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Alcman est un poète lyrique grec du VIIe siècle av. J.-C., originaire de Sparte. Il est surtout connu pour ses parthénies, chants choraux exécutés par des chœurs de jeunes filles lors de fêtes religieuses. Bien que peu d’éléments biographiques soient certains, on pense qu’il n’était pas d’origine spartiate mais probablement de Lydie, ce qui expliquerait certaines influences orientales dans son œuvre. Ses poèmes sont caractérisés par un style raffiné, des descriptions de la nature, et une grande musicalité."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Parthénie de Louxor* (fragment 1 PMG)\n  - Mètre : lyrique choral (anapestes, dactyles, etc.)\n  - Édition critique : Campbell (Greek Lyric II)\n  - Manuscrit : P. Louvre E3320\n\n- *Fragments divers*\n  - Source : papyri égyptiens, scholies antiques\n  - Thèmes : chants rituels, nature, mythologie"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="La poésie d'Alcman utilise des structures métriques complexes adaptées à la performance chorale. On note une alternance de séquences longues et brèves, des clausules cadencées, et une grande fluidité rythmique. Ses compositions montrent également une influence du dialecte dorien et des traditions musicales d’Asie Mineure."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Calame, C., *Choruses of Young Women in Ancient Greece*\n- Campbell, D. A., *Greek Lyric II: Anacreon, Anacreontea, Archilochus, etc.*\n- Page, D. L., *Poetarum Melicorum Graecorum Fragmenta*\n- West, M. L., *Ancient Greek Music*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

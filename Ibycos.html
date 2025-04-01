@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibycos</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Ibycos</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Ibycos est un poète lyrique grec du VIe siècle av. J.-C., originaire de Rhégion, en Grande-Grèce. Il est surtout connu pour avoir composé des poèmes érotiques et élégiaques en dialecte dorien. Selon la tradition, il aurait séjourné à la cour de Polycrate à Samos, ce qui le rattache au cercle culturel ionien. Sa poésie évoque l’amour passionné et la beauté des jeunes garçons, dans un style raffiné et imagé. Peu de ses œuvres ont survécu, mais il fut admiré dans l’Antiquité, notamment pour son habileté métrique."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Fragments lyriques érotiques*\n  - Mètre : éolien, dorien, strophes complexes\n  - Édition critique : Campbell (Greek Lyric III)\n  - Source : papyri, citations antiques\n\n- *Éloges et chants d’amour*\n  - Thèmes : éros, nature, jeunesse\n  - Style : luxuriant, riche en métaphores"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Ibycos se distingue par la richesse de ses combinaisons métriques, empruntées à la tradition éolienne et dorienne. Il joue sur les rythmes strophiques variés pour créer une musicalité lyrique expressive. Ses poèmes témoignent d’une grande souplesse rythmique au service d’une poésie sensuelle et évocatrice."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Campbell, D. A., *Greek Lyric III: Stesichorus, Ibycus, Simonides*\n- Page, D. L., *Poetarum Melicorum Graecorum Fragmenta*\n- Bowra, C. M., *Greek Lyric Poetry*\n- Lefkowitz, M. R., *The Lives of the Greek Poets*\n- Snyder, J. M., *The Woman and the Lyre*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

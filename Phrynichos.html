@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phrynichos</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Phrynichos</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Phrynichos est un dramaturge tragique grec du début du Ve siècle av. J.-C., élève probable de Thespis et contemporain d’Eschyle. Il est l’un des premiers à introduire des thèmes contemporains dans la tragédie, notamment dans sa pièce *La Prise de Milet*, qui traitait d’un événement historique récent. Il fut condamné à une amende pour avoir trop ému le public. Son théâtre est considéré comme une étape importante vers la tragédie classique. Peu de fragments subsistent, mais son influence est attestée."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *La Prise de Milet*\n  - Sujet : actualité historique\n  - Mètre : trimètre iambique, chants lyriques\n  - Source : mention par Hérodote\n\n- *Les Phéniciennes, Les Danaïdes, Antée*\n  - Fragments très partiels\n  - Édition critique : TrGF I (Snell et Kannicht)\n  - Caractéristiques : innovations thématiques et formelles"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Phrynichos fait usage des mètres tragiques traditionnels, tout en innovant dans la composition chorale. Ses vers iambiques sont marqués par une expressivité directe, et ses chants lyriques témoignent d’une évolution stylistique vers plus de pathos. La prosodie soutient l’émotion tragique par des alternances rythmiques et des responsions simples mais efficaces."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Snell, B. & Kannicht, R., *Tragōdographorum Graecorum Fragmenta*\n- Csapo, E. & Slater, W. J., *The Context of Ancient Drama*\n- Jouan, F. & Van Looy, H., *Euripide: tragédies* (tomes de contexte)\n- Lesky, A., *Histoire de la littérature grecque*\n- Griffith, M., 'Theatre and Politics in Fifth-Century Athens'"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

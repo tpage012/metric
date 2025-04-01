@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bacchylide</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Bacchylide</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Bacchylide est un poète lyrique grec du Ve siècle av. J.-C., originaire de l’île de Céos. Neveu du poète Simonide, il est surtout connu pour ses épinicies (odes de victoire) et ses dithyrambes. Bien qu’éclipsé par Pindare, Bacchylide jouissait d’une grande renommée de son vivant. Son style est plus narratif, clair et fluide, et ses poèmes montrent une maîtrise raffinée de la langue et de la métrique. Ses œuvres ont été retrouvées en grande partie grâce à un papyrus découvert en Égypte en 1896."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Odes de victoire (Épinicies)*\n  - Mètre : strophes lyriques variées\n  - Édition critique : Snell-Maehler\n  - Manuscrit : Papyrus 136 (British Museum)\n\n- *Dithyrambes*\n  - Mètre : lyrique complexe\n  - Thèmes : mythologie, exaltation dionysiaque"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Bacchylide privilégie les structures métriques harmonieuses, souvent avec un schéma clair strophe-antistrophe-épisode. Il utilise des mètres choraux complexes mais réguliers, favorisant un effet narratif fluide. Ses poèmes se caractérisent par des transitions souples entre les unités métriques, ce qui soutient la clarté du discours poétique."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Snell, B. & Maehler, H., *Bacchylidis Carmina cum Fragmentis*\n- Campbell, D. A., *Greek Lyric IV*\n- Race, W. H., *Style and Rhetoric in Bacchylides*\n- Lefkowitz, M. R., *First-Person Fictions: Pindar and the Poetics of Self*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>

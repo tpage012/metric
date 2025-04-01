@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simonide de Céos</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .markdown {margin-bottom: 24px;}
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    details {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+  <div class="w3-container w3-padding-32">
+    <h1>Simonide de Céos</h1>
+
+    <details open>
+      <summary>Biographie</summary>
+      <div class="markdown" data-md="Simonide de Céos est un poète lyrique grec né vers 556 av. J.-C. sur l'île de Céos. Il vécut longtemps en Thessalie, puis à la cour des tyrans de Syracuse. Il fut l’un des premiers poètes à vivre de son art grâce au mécénat. Il est réputé pour ses épigrammes funéraires, ses élégies et ses chants de victoire. Son style est marqué par la clarté, la concision et une certaine émotion contenue. Il est aussi crédité de la création de la mnémotechnique fondée sur la disposition spatiale des idées."></div>
+    </details>
+
+    <details>
+      <summary>Œuvres</summary>
+      <div class="markdown" data-md="- *Épigrammes funéraires*\n  - Mètre : élégiaque\n  - Thèmes : guerre, mémoire, héroïsme\n  - Édition critique : Campbell (Greek Lyric III)\n\n- *Epinicies et élégies*\n  - Mètre : lyrique choral\n  - Destinataires : vainqueurs des jeux, commanditaires aristocratiques"></div>
+    </details>
+
+    <details>
+      <summary>Remarques de prosodie</summary>
+      <div class="markdown" data-md="Simonide manie le distique élégiaque avec maîtrise, en adaptant la forme à des sujets variés, de la commémoration à la louange. Ses mètres lyriques témoignent d’une recherche de sobriété et d’équilibre rythmique. Il sait exploiter les clausules pour souligner la gravité ou la solennité de son propos."></div>
+    </details>
+
+    <details>
+      <summary>Bibliographie</summary>
+      <div class="markdown" data-md="- Campbell, D. A., *Greek Lyric III*\n- Page, D. L., *Poetarum Melicorum Graecorum Fragmenta*\n- Bowra, C. M., *Greek Lyric Poetry*\n- Gentili, B., *Poetry and Its Public in Ancient Greece*\n- Svenbro, J., *Phrasikleia: Anthropologie de la lecture en Grèce ancienne*"></div>
+    </details>
+  </div>
+
+  <script>
+    document.querySelectorAll('.markdown').forEach(el => {
+      const md = el.getAttribute('data-md');
+      el.innerHTML = marked.parse(md);
+    });
+  </script>
+</body>
+</html>
